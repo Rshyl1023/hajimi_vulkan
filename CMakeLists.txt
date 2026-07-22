@@ -14,6 +14,8 @@ add_executable(hajimi_vulkan
         src/lve_window.cpp
         src/first_app.cpp
         src/first_app.h
+        src/lve_pipeline.cpp
+        src/lve_pipeline.hpp
 )
 
 target_compile_definitions(hajimi_vulkan
