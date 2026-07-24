@@ -16,6 +16,8 @@ add_executable(hajimi_vulkan
         src/first_app.h
         src/lve_pipeline.cpp
         src/lve_pipeline.hpp
+        src/lve_device.cpp
+        src/lve_device.hpp
 )
 
 target_compile_definitions(hajimi_vulkan
