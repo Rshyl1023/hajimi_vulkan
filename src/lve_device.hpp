@@ -22,7 +22,7 @@ struct QueueFamilyIndices {
   bool isComplete() { return graphicsFamilyHasValue && presentFamilyHasValue; }
 };
 
-class lveDevice {
+class LveDevice {
  public:
 #ifdef NDEBUG
   const bool enableValidationLayers = false;
@@ -30,14 +30,14 @@ class lveDevice {
   const bool enableValidationLayers = true;
 #endif
 
-  lveDevice(lveWindow &window);
-  ~lveDevice();
+  LveDevice(LveWindow &window);
+  ~LveDevice();
 
   // Not copyable or movable
-  lveDevice(const lveDevice &) = delete;
-  void operator=(const lveDevice &) = delete;
-  lveDevice(lveDevice &&) = delete;
-  lveDevice &operator=(lveDevice &&) = delete;
+  LveDevice(const LveDevice &) = delete;
+  void operator=(const LveDevice &) = delete;
+  LveDevice(LveDevice &&) = delete;
+  LveDevice &operator=(LveDevice &&) = delete;
 
   VkCommandPool getCommandPool() { return commandPool; }
   VkDevice device() { return device_; }
@@ -93,7 +93,7 @@ class lveDevice {
   VkInstance instance;
   VkDebugUtilsMessengerEXT debugMessenger;
   VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
-  lveWindow &window;
+  LveWindow &window;
   VkCommandPool commandPool;
 
   VkDevice device_;
