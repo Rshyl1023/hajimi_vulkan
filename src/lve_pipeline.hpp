@@ -7,7 +7,18 @@
 #include <vector>
 
 struct PipelineConfigInfo {
-
+    VkViewport viewport;
+    VkRect2D scissor;
+    VkPipelineViewportStateCreateInfo viewportInfo;
+    VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo;
+    VkPipelineRasterizationStateCreateInfo rasterizationInfo;
+    VkPipelineMultisampleStateCreateInfo multisampleInfo;
+    VkPipelineColorBlendAttachmentState colorBlendAttachment;
+    VkPipelineColorBlendStateCreateInfo colorBlendInfo;
+    VkPipelineDepthStencilStateCreateInfo depthStencilInfo;
+    VkPipelineLayout pipelineLayout = nullptr;
+    VkRenderPass renderPass = nullptr;
+    uint32_t subpass = 0;
 };
 
 namespace lve {
@@ -19,7 +30,7 @@ namespace lve {
             const std::string& vertFilePath,
             const std::string& fragFilePath);
 
-        ~LvePipeline(){}
+        ~LvePipeline();
 
         // 禁止行为
         LvePipeline(const LvePipeline&) = delete; // 禁止复制构造函数
