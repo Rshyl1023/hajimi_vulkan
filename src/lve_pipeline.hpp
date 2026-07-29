@@ -52,7 +52,7 @@ namespace lve {
 
         LveDevice& lveDevice; // 逻辑设备资源比管线存在时间更久
         VkPipeline graphicsPipeline; // Vulkan 管线对象句柄
-        // shader Module
+        // shaders Module
         VkShaderModule vertShaderModule;
         VkShaderModule fragShaderModule;
     };
