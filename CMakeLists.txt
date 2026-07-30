@@ -18,6 +18,8 @@ add_executable(hajimi_vulkan
         src/lve_pipeline.hpp
         src/lve_device.cpp
         src/lve_device.hpp
+        src/lve_swap_chain.cpp
+        src/lve_swap_chain.hpp
 )
 
 target_compile_definitions(hajimi_vulkan
