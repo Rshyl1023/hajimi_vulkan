@@ -31,6 +31,8 @@ namespace lve {
 
         ~LvePipeline();
 
+        void bind(VkCommandBuffer commandBuffer);
+
         // 禁止行为
         LvePipeline(const LvePipeline&) = delete; // 禁止复制构造函数
         void operator=(const LvePipeline&) = delete; // 禁止 = 直接赋值
